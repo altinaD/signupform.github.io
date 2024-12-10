@@ -7,7 +7,7 @@
       <div
         class="right-img-wrapper"
         :style="{
-          backgroundImage: 'url(' + 'src/assets/images/illustration-sign-up-desktop.svg' + ')',
+          backgroundImage: 'url(' + imgUrl + ')',
         }"
       ></div>
     </div>
@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 import Left from '@/components/main/Left.vue'
+import imgUrl from '../../assets/images/illustration-sign-up-desktop.svg'
 </script>
 
 <style scoped lang="scss">
