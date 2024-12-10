@@ -6,13 +6,23 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
+      redirect: '/signup-form',
+    },
+    {
+      path: '/signup-form',
+      name: 'signup-form',
       component: Main,
+      beforeEnter: (to, from) => {
+        document.title = 'Signup-form'
+      },
     },
     {
       path: '/success',
       name: 'success',
       component: () => import('../views/Success.vue'),
+      beforeEnter: (to, from) => {
+        document.title = 'Signup-form - Success'
+      },
     },
   ],
 })
